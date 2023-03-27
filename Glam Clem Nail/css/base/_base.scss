@@ -7,7 +7,28 @@
 }
 
 html {
+  //This defines what 1rem is
   font-size: 62.5%;
+
+  //1rem in 1200px screen
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  //1rem in 900px screen
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  //1rem in 600px screen
+  @include respond(phone) {
+    font-size: 43.75%;
+  }
+
+  //1rem in 1800px screen
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
 }
 
 body {

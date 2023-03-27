@@ -5,7 +5,10 @@
   padding: 2rem;
   background-color: rgba($color-primary-pink, 0.2);
   border-radius: 5px;
-  // overflow: hidden;
+
+  @include respond(tab-port) {
+    height: auto;
+  }
   &__picture {
     height: 100%;
     width: 100%;
@@ -17,6 +20,14 @@
     transform: translate(1rem, -5rem);
     transition: all 0.3s;
     color: $color-white;
+
+    @include respond(tab-port) {
+      opacity: 1;
+      background-color: $color-primary-dark-pink;
+      transform: translate(0, 0);
+      font-size: 2rem;
+      padding: 1rem 4rem;
+    }
   }
   &:hover &__text-box {
     transform: translate(1rem, -10rem);

@@ -14,6 +14,9 @@
   border-radius: 4px;
   box-shadow: 0 1rem 2rem rgba($color-grey-dark-1, 0.2);
 
+  @include respond(phone) {
+    transform: skewX(0deg);
+  }
   &__shape {
     width: 20rem;
     height: 20rem;
@@ -21,6 +24,9 @@
     clip-path: circle(50% at 50% 50%);
     position: relative;
     transform: skewX(12deg);
+    @include respond(phone) {
+      transform: skewX(0deg);
+    }
   }
   &__photo {
     height: 100%;
@@ -30,6 +36,9 @@
   &__text {
     transform: skewX(12deg);
     padding: 2rem;
+    @include respond(phone) {
+      transform: skewX(0deg);
+    }
   }
   &__caption {
     position: absolute;

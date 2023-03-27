@@ -8,7 +8,31 @@
     rgba($color-primary-dark-pink, 0.9) 75%,
     $color-grey-light-1 75%
   );
-  overflow: hidden;
+  // overflow: hidden;
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+      90deg,
+      rgba($color-primary-dark-pink, 0.9) 0%,
+      rgba($color-primary-dark-pink, 0.9) 70%,
+      $color-grey-light-1 70%
+    );
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+      90deg,
+      rgba($color-primary-dark-pink, 0.9) 0%,
+      rgba($color-primary-dark-pink, 0.9) 65%,
+      $color-grey-light-1 65%
+    );
+  }
+
+  // @include respond(tab-port) {
+  //   background-image: none;
+  //   background-color: rgba($color-primary-dark-pink, 0.9);
+  // }
+
   &__logo {
     width: 20rem;
     position: relative;
@@ -25,7 +49,7 @@
 
   &__heading-text {
     margin-top: 5rem;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     letter-spacing: 0.3rem;
   }
 
@@ -34,9 +58,16 @@
   }
 
   &__picture-box {
-    position: relative;
-    left: 15rem;
-    // height: 60rem;
+    position: absolute;
+    right: 25%;
+
+    @include respond(tab-land) {
+      right: 30%;
+    }
+
+    @include respond(tab-port) {
+      right: 35%;
+    }
   }
   &__picture {
     position: absolute;
@@ -44,13 +75,35 @@
     width: 27rem;
     height: 27rem;
     animation: moveInRight 1.25s ease-in;
+
+    // @include respond(tab-port) {
+    //   width: 25rem;
+    //   height: 25rem;
+    // }
+
+    // @include respond(phone) {
+    //   width: 22rem;
+    //   height: 22rem;
+    // }
     &--1 {
-      left: -14.5rem;
+      left: -27rem;
       top: 10rem;
+
+      @include respond(tab-land) {
+        left: 0;
+        top: 0;
+      }
+
+      @include respond(tab-port) {
+        top: -2rem;
+      }
     }
     &--2 {
-      left: 12.5rem;
       top: 25rem;
+
+      // @include respond(tab-port) {
+      //   top: 27rem;
+      // }
     }
   }
   &__decoration-box {
@@ -64,20 +117,45 @@
       //   $color-primary-dark 0% 25%,
       //   $color-primary-blue 0% 50%
       // );
-      left: -30rem;
+      left: -42rem;
+
+      @include respond(tab-land) {
+        display: none;
+      }
     }
     &--2 {
       background-color: rgba($color-primary-blue, 0.5);
       width: 41rem;
       height: 41rem;
       top: -6rem;
-      left: -12rem;
+      left: -23rem;
+
+      @include respond(tab-land) {
+        width: 32rem;
+        height: 32rem;
+      }
+
+      @include respond(tab-port) {
+        top: -8rem;
+        left: 0;
+      }
     }
     &--3 {
       background-color: rgba($color-primary-pink, 0.5);
       width: 35rem;
       height: 35rem;
       top: 13rem;
+      left: -13rem;
+
+      @include respond(tab-land) {
+        width: 30rem;
+        height: 30rem;
+      }
+
+      @include respond(tab-port) {
+        top: 15rem;
+        left: -6rem;
+      }
     }
   }
 }

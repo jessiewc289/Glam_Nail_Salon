@@ -1,9 +1,25 @@
+//row changed flex direction to column
 .row {
   display: flex;
   justify-content: space-evenly;
+
   & > *:not(:last-child) {
     margin-right: $gutter-horizontal;
   }
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    & > *:not(:last-child) {
+      margin-right: 0;
+    }
+    justify-content: center;
+    align-items: center;
+
+    & > *:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+  }
+
   .col-1-of-2 {
     // border: 1px solid black;
     flex-grow: 1;
@@ -45,5 +61,28 @@
     flex-basis: calc(
       (100% - (#{$gutter-horizontal} * 3)) / 4 * 3 + 2 * $gutter-horizontal
     );
+  }
+}
+
+//row without flex direction changed to column
+.row--1 {
+  display: flex;
+  justify-content: space-evenly;
+
+  & > *:not(:last-child) {
+    margin-right: $gutter-horizontal;
+  }
+
+  .col-1-of-2--1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc((100% - #{$gutter-horizontal}) / 2);
+  }
+
+  .col-1-of-3--1 {
+    // border: 1px solid black;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc((100% - (#{$gutter-horizontal} * 2)) / 3);
   }
 }

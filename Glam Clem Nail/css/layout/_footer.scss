@@ -4,9 +4,17 @@
   font-size: 1.5rem;
   color: $color-primary-dark-pink;
   letter-spacing: 0.15rem;
+  // @include respond(tab-port) {
+  //   padding: 5rem;
+  //   text-align: center;
+  // }
+
   &__logo-box {
     width: 50%;
     transform: translate(-10%, 10%);
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
   &__logo {
     width: 100%;
@@ -17,6 +25,10 @@
     text-align: center;
     transform: translate(0, -5rem);
     text-transform: uppercase;
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+      transform: translate(0, -13rem);
+    }
   }
 
   &__follow-us {
