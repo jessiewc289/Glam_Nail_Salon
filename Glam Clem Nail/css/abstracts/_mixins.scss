@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* MEDIA QUERY MANAGER*/
 /*
 0 ~ 480px     = phone-s
@@ -45,3 +46,44 @@
     }
   }
 }
+=======
+/* MEDIA QUERY MANAGER*/
+/*
+0 ~ 600px     = phone
+600 ~ 900px   = tab-port
+900 ~ 1200px  = tab-land
+1200 ~ 1800px = normal
+1800px ~      = big-desktop
+
+*/
+
+@mixin respond($breakpoint) {
+  //max-width: 600px
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  //max-width: 900px
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  //max-width: 1200px
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  //max-width: 1800px
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+>>>>>>> 70a0321b6e5ab0ca159b259b65fd9fbf6cde8f67
