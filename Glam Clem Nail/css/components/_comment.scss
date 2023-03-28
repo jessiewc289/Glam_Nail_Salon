@@ -45,6 +45,7 @@
     transition: all 0.5s;
     @include respond(phone-s) {
       transform: translate(0, 0);
+      border-radius: 3px;
     }
   }
   &__text {

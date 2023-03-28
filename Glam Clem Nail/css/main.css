@@ -327,6 +327,7 @@ body {
 @media (max-width: 30em) {
   .customer-comment__photo {
     transform: translate(0, 0);
+    border-radius: 3px;
   }
 }
 .customer-comment__text {
@@ -467,6 +468,12 @@ body {
   .reason-box {
     height: auto;
     width: 45rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .reason-box {
+    height: auto;
+    width: 40rem;
   }
 }
 .reason-box__icon {
@@ -968,7 +975,7 @@ body {
 }
 @media (max-width: 30em) {
   .section-styles {
-    padding: 10rem 8rem;
+    padding: 10rem 3rem;
     text-align: center;
   }
 }
@@ -980,7 +987,7 @@ body {
 @media (max-width: 56.25em) {
   .section-reasons {
     padding: 10rem 10rem;
-    margin-top: 5rem;
+    padding-top: 5rem;
   }
 }
 
@@ -992,6 +999,11 @@ body {
 @media (max-width: 56.25em) {
   .section-customer-comment {
     padding: 5rem 10rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .section-customer-comment {
+    padding: 5rem 5rem;
   }
 }
 
