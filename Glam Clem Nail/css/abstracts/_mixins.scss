@@ -1,6 +1,7 @@
 /* MEDIA QUERY MANAGER*/
 /*
-0 ~ 600px     = phone
+0 ~ 480px     = phone-s
+480 ~ 600px   = phone
 600 ~ 900px   = tab-port
 900 ~ 1200px  = tab-land
 1200 ~ 1800px = normal
@@ -9,6 +10,13 @@
 */
 
 @mixin respond($breakpoint) {
+  //max-width: 480px
+  @if $breakpoint == phone-s {
+    @media (max-width: 30em) {
+      @content;
+    }
+  }
+
   //max-width: 600px
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {

@@ -78,11 +78,82 @@
     flex-shrink: 1;
     flex-basis: calc((100% - #{$gutter-horizontal}) / 2);
   }
+}
 
+.row--2 {
+  display: flex;
+  flex-flow: row wrap;
   .col-1-of-3--1 {
-    // border: 1px solid black;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: calc((100% - (#{$gutter-horizontal} * 2)) / 3);
+    &--left {
+      order: 1;
+      width: 33.3333%;
+      @include respond(phone) {
+        width: 100%;
+        // display: flex;
+        // justify-content: center;
+      }
+    }
+
+    &--center {
+      order: 2;
+      width: 33.3333%;
+
+      @include respond(phone) {
+        width: 50%;
+      }
+    }
+
+    &--right {
+      order: 3;
+      width: 33.3333%;
+
+      @include respond(phone) {
+        width: 50%;
+      }
+    }
+
+    // &--left {
+    //   @include respond(phone) {
+    //     order: 1;
+    //     width: 100%;
+    //   }
+    // }
+
+    // &--center {
+    //   @include respond(phone) {
+    //     flex-shrink: 0;
+    //     flex-grow: 0;
+    //     order: 2;
+    //     width: 50%;
+    //   }
+    // }
+
+    // &--right {
+    //   @include respond(phone) {
+    //     flex-shrink: 0;
+    //     flex-grow: 0;
+    //     order: 3;
+    //     width: 50%;
+    //   }
+    // }
   }
 }
+// #container {
+//   display: flex;
+//   flex-flow: row wrap;
+// }
+// .left {
+//   order: 1;
+//   width: 100%;
+//   background-color: red;
+// }
+// .right {
+//   order: 2;
+//   width: 50%;
+//   background-color: green;
+// }
+// .center {
+//   order: 3;
+//   width: 50%;
+//   background-color: blue;
+// }

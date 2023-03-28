@@ -4,16 +4,21 @@
   font-size: 1.5rem;
   color: $color-primary-dark-pink;
   letter-spacing: 0.15rem;
-  // @include respond(tab-port) {
-  //   padding: 5rem;
-  //   text-align: center;
-  // }
+  @include respond(phone) {
+    padding: 0 10rem 3rem 10rem;
+  }
+
+  @include respond(phone-s) {
+    padding: 0 5rem 3rem 5rem;
+  }
 
   &__logo-box {
-    width: 50%;
-    transform: translate(-10%, 10%);
-    @include respond(tab-port) {
-      width: 100%;
+    width: 80%;
+    position: relative;
+
+    @include respond(phone) {
+      width: 50%;
+      margin: 0 auto;
     }
   }
   &__logo {
@@ -23,11 +28,23 @@
   &__copyright {
     font-size: 1rem;
     text-align: center;
-    transform: translate(0, -5rem);
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-transform: uppercase;
     @include respond(tab-port) {
-      font-size: 1.5rem;
-      transform: translate(0, -13rem);
+      //   font-size: 1.5rem;
+      top: 75%;
+    }
+    @include respond(phone) {
+      top: 70%;
+    }
+  }
+
+  &__contact-box {
+    @include respond(phone) {
+      text-align: center;
     }
   }
 
@@ -50,6 +67,13 @@
   &__email-box {
     margin-top: 0.5rem;
   }
+
+  &__navigation {
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
   &__list {
     list-style-type: none;
   }

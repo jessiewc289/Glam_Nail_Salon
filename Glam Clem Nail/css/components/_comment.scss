@@ -17,6 +17,12 @@
   @include respond(phone) {
     transform: skewX(0deg);
   }
+
+  @include respond(phone-s) {
+    padding: 4rem 2rem 1.5rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+  }
   &__shape {
     width: 20rem;
     height: 20rem;
@@ -27,11 +33,19 @@
     @include respond(phone) {
       transform: skewX(0deg);
     }
+    @include respond(phone-s) {
+      clip-path: none;
+      height: 15rem;
+      width: auto;
+    }
   }
   &__photo {
     height: 100%;
     transform: translate(-2.5rem, 0);
     transition: all 0.5s;
+    @include respond(phone-s) {
+      transform: translate(0, 0);
+    }
   }
   &__text {
     transform: skewX(12deg);

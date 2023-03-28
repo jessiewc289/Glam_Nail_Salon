@@ -19,6 +19,10 @@
     height: 35rem;
     top: -13rem;
     left: -9rem;
+
+    @include respond(phone-s) {
+      top: -8rem;
+    }
   }
   &--2 {
     width: 45rem;
