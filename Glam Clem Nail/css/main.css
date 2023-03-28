@@ -1,7 +1,6 @@
 /* MEDIA QUERY MANAGER*/
 /*
-0 ~ 480px     = phone-s
-480 ~ 600px   = phone
+0 ~ 600px     = phone
 600 ~ 900px   = tab-port
 900 ~ 1200px  = tab-land
 1200 ~ 1800px = normal
@@ -390,6 +389,12 @@ body {
   width: 45rem;
   height: 45rem;
   top: -5rem;
+}
+@media (max-width: 30em) {
+  .section__decoration-box--2 {
+    width: 35rem;
+    height: 35rem;
+  }
 }
 
 .form__input {
